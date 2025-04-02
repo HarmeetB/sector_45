@@ -99,6 +99,13 @@ tbody tr:hover {
 }
 /* Media Queries for Responsiveness */
 @media (max-width: 768px) {
+   /* Make the table horizontally scrollable on smaller screens */
+   table {
+       display: block;
+       overflow-x: auto;
+       white-space: nowrap;
+   }
+   /* Adjust the search bar and category dropdown to be more mobile-friendly */
    .controls {
        flex-direction: column;
        align-items: flex-start;
@@ -111,7 +118,12 @@ tbody tr:hover {
        width: 100%;
        margin-top: 1em;
    }
+   /* Optional: Resize table text for mobile screens */
+   th, td {
+       font-size: 0.9em;
+   }
 }
+
 /* No Results Found Styling */
 .no-results {
    text-align: center;
