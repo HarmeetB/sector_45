@@ -1,129 +1,135 @@
-header {
- background-color: #4da6ff;
- color: white;
- padding: 0.1em 0;
- text-align: center;
-}
-
-header h1 {
- margin: 0;
-}
-
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+/* Global Styles */
 body {
- font-family: Arial, sans-serif;
- margin: 0;
- padding: 0;
- background-color: #f5f5f5;
- color: #333;
+   font-family: 'Inter', sans-serif;
+   background: linear-gradient(135deg, #f3f4f6, #ffffff);
+   margin: 0;
+   padding: 0;
+   color: #333;
 }
-
+header {
+   background-color: #0066cc;
+   color: white;
+   padding: 1.5em 0;
+   text-align: center;
+   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+header h1 {
+   margin: 0;
+   font-size: 2.5em;
+   font-weight: 600;
+}
 /* Main Container */
 .main-container {
- width: 100%;
- padding: 0 1em;
- box-sizing: border-box;
+   max-width: 1100px;
+   margin: 0 auto;
+   padding: 2em;
 }
-
-@media (min-width: 768px) {
- .main-container {
- max-width: 60%;
- margin: 0 auto;
- }
+/* Controls */
+.controls {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   margin-bottom: 1em;
 }
-
-/* General Container Padding */
-.container {
- padding: 1em;
+.category-filter, .search-bar {
+   flex: 1;
+   display: flex;
+   align-items: center;
 }
-
-/* Search Bar */
-.search-bar {
- margin: 1em 0;
- display: flex;
- justify-content: center;
+.category-filter label {
+   margin-right: 0.5em;
+   font-size: 1.1em;
+   font-weight: 500;
 }
-
+.category-filter select,
 .search-bar input {
- width: 60%;
- padding: 0.5em;
- font-size: 1em;
- border: 1px solid #ccc;
- border-radius: 5px;
+   padding: 0.8em 1.2em;
+   border: 1px solid #ddd;
+   border-radius: 5px;
+   font-size: 1.1em;
+   width: 100%;
+   max-width: 250px;
+   transition: border-color 0.3s;
 }
-
+.category-filter select:hover,
+.search-bar input:hover {
+   border-color: #0066cc;
+}
+.search-bar input {
+   margin-left: 1em;
+   width: 60%;
+}
 /* Table Styles */
 table {
- width: 100%;
- border-collapse: collapse;
- margin-top: 1em;
+   width: 100%;
+   border-collapse: collapse;
+   margin-top: 2em;
+   border-radius: 8px;
+   overflow: hidden;
 }
-
 th, td {
- text-align: left;
- padding: 0.5em;
- border: 1px solid #ddd;
+   padding: 1em;
+   text-align: left;
 }
-
-/* Table Header */
 th {
- background-color: #4da6ff;
- color: white;
+   background-color: #0066cc;
+   color: white;
+   font-size: 1.1em;
 }
-
-/* Alternating Row Colors */
-tbody tr:nth-child(even) {
- background-color: #f9f9f9;
+td {
+   background-color: #fff;
+   border-top: 1px solid #f4f4f4;
 }
-
-/* Hover Effect on Rows */
+tbody tr:nth-child(odd) {
+   background-color: #f9f9f9;
+}
 tbody tr:hover {
- background-color: #e6f7ff;
+   background-color: #e6f7ff;
+   cursor: pointer;
+   transition: background-color 0.3s ease;
 }
-
-/* Controls (Search + Category Filter) */
-.controls {
- display: flex;
- justify-content: center;
- align-items: center;
- margin-top: 1em;
-}
-
-.category-filter, .search-bar {
- margin: 0 1em;
-}
-
-.category-filter label {
- margin-right: 0.5em;
-}
-
-/* Dropdown & Input Fields */
-.category-filter select, .search-bar input {
- padding: 0.5em;
- font-size: 1em;
- border: 1px solid #ccc;
- border-radius: 5px;
-}
-
-/* Mobile Responsive Adjustments */
-@media screen and (max-width: 600px) {
- .controls {
- flex-direction: column;
- align-items: stretch;
- }
-
- .search-bar input {
- width: 100%;
- margin-top: 10px;
- }
-
- .category-filter select {
- width: 100%;
- }
-}
-
 /* Footer */
 .footer {
- text-align: center;
- margin-top: 2em;
- font-size: 0.9em;
+   text-align: center;
+   margin-top: 3em;
+   font-size: 0.9em;
+   color: #777;
+}
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+   .controls {
+       flex-direction: column;
+       align-items: flex-start;
+   }
+   .search-bar input {
+       margin-left: 0;
+       width: 100%;
+   }
+   .category-filter select {
+       width: 100%;
+       margin-top: 1em;
+   }
+}
+/* No Results Found Styling */
+.no-results {
+   text-align: center;
+   font-size: 1.2em;
+   color: #999;
+   margin-top: 2em;
+}
+/* Button Styles */
+button {
+   padding: 0.8em 2em;
+   background-color: #0066cc;
+   color: white;
+   font-size: 1.1em;
+   border: none;
+   border-radius: 30px;
+   cursor: pointer;
+   transition: background-color 0.3s ease;
+}
+button:hover {
+   background-color: #005bb5;
 }
