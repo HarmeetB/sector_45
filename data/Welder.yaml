@@ -1,14 +1,14 @@
-Name: Aashif welding work
-Phone: +918512033965
-Name: Md Gulfam Fabricator
-Phone: +919899205786
-Name: Welding Services
-Phone: +919870517557
-Name: Sagar steel works
-Phone: +919582201227
-Name: Trimurti welding works and aluminium glass
-Phone: +919911196080
-Name: Ayesha steel fabricator
-Phone: +917838616815
-Name: Welding wale
-Phone: +919870517557
+- name: "Aashif welding work"
+  phone: "+918512033965"
+- name: "Md Gulfam Fabricator"
+  phone: "+919899205786"
+- name: "Welding Services"
+  phone: "+919870517557"
+- name: "Sagar steel works"
+  phone: "+919582201227"
+- name: "Trimurti welding works and aluminium glass"
+  phone: "+919911196080"
+- name: "Ayesha steel fabricator"
+  phone: "+917838616815"
+- name: "Welding wale"
+  phone: "+919870517557"
