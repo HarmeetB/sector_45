@@ -98,35 +98,31 @@ tbody tr:hover {
    color: #777;
 }
 /* Media Queries for Responsiveness */
+/* Media Queries for Responsiveness */
 @media (max-width: 768px) {
-   /* Make table data stack vertically on small screens */
+   /* Adjust table to fit smaller screens */
    table {
        width: 100%;
-       display: block;
-       border-collapse: collapse;
+       table-layout: fixed; /* Ensures columns are resized */
    }
    th, td {
-       display: block;
-       text-align: left;
-       padding: 1em;
-       border: none;
+       padding: 0.8em;
+       font-size: 0.9em;
+   }
+   /* Adjust column widths for smaller screens */
+   th, td {
+       word-wrap: break-word;
+       overflow: hidden;
    }
    th {
-       background-color: #f4f4f4;
-       font-weight: bold;
-       text-align: left;
+       background-color: #4da6ff;
+       color: white;
+       text-align: center;
    }
    td {
-       background-color: transparent;
-       border-top: 1px solid #ddd;
+       text-align: left;
    }
-   td:before {
-       content: attr(data-label);
-       font-weight: bold;
-       display: block;
-       margin-bottom: 0.5em;
-   }
-   /* Center the search bar on mobile */
+   /* Center the search bar */
    .search-bar {
        display: flex;
        justify-content: center;
@@ -136,13 +132,11 @@ tbody tr:hover {
    .search-bar input {
        width: 80%;
        max-width: 300px;
-       margin: 0 auto;
    }
-   /* Adjust controls layout to be stacked */
+   /* Adjust controls layout to be stacked and centered */
    .controls {
        flex-direction: column;
        align-items: center;
-       width: 100%;
    }
    .category-filter, .search-bar {
        width: 100%;
@@ -154,6 +148,7 @@ tbody tr:hover {
        margin: 0 auto;
    }
 }
+  
 /* No Results Found Styling */
 .no-results {
    text-align: center;
